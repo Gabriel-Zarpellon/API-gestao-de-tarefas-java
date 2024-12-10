@@ -1,13 +1,13 @@
-package com.task_management_app;
+package com.task_management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskManagementAppApplication {
+public class TaskManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskManagementAppApplication.class, args);
+		SpringApplication.run(TaskManagementApplication.class, args);
 	}
 
 }

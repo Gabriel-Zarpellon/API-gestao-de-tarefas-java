@@ -127,7 +127,7 @@ STATUS 404 NOT FOUND
 }
 ```
 
-### Exclusão de tarefas por id GET /api/tasks/id
+### Exclusão de tarefas por id DELETE /api/tasks/id
 
 
 Padrão de resposta (STATUS 204)

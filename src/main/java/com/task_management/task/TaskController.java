@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.task_management.exceptions.NotFoundException;
 import com.task_management.task.dtos.TaskCreateDTO;
 
 import jakarta.validation.Valid;
@@ -47,14 +48,14 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public Optional<TaskEntity> readOne(@PathVariable UUID id) {
-        Optional<TaskEntity> response = taskService.readOne(id);
+    public TaskEntity readOne(@PathVariable UUID id) throws NotFoundException{
+        TaskEntity response = taskService.readOne(id);
 
         return response;
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable UUID id) {
+    public ResponseEntity<?> delete(@PathVariable UUID id) throws NotFoundException{
         taskService.delete(id);
 
         return ResponseEntity.status(204).body(null);

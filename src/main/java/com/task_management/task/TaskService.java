@@ -7,6 +7,8 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.task_management.exceptions.NotFoundException;
+
 @Service
 public class TaskService {
     @Autowired
@@ -23,11 +25,12 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    public Optional<TaskEntity> readOne(UUID id) {
-        return taskRepository.findById(id);
+    public TaskEntity readOne(UUID id) throws NotFoundException{
+        return taskRepository.findById(id).orElseThrow(()-> new NotFoundException());
     }
 
-    public void delete(UUID id) {
+    public void delete(UUID id) throws NotFoundException {
+        taskRepository.findById(id).orElseThrow(()-> new NotFoundException());
         taskRepository.deleteById(id);
         return;
     }

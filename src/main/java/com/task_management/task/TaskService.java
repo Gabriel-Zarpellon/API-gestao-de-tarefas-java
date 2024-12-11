@@ -16,7 +16,10 @@ public class TaskService {
         return taskRepository.save(data);
     }
 
-    public List<TaskEntity> read() {
+    public List<TaskEntity> read(Optional<String> status) {
+        if (!status.isEmpty()) {
+            return taskRepository.findByStatus(status);
+        }
         return taskRepository.findAll();
     }
 

@@ -40,6 +40,8 @@ public class TaskController {
     }
 
     @GetMapping
+    public List<TaskEntity> read(Optional<String> status) {
+        List<TaskEntity> response = taskService.read(status);
 
         return response;
     }

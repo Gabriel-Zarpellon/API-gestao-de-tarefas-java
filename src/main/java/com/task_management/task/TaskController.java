@@ -25,9 +25,21 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @PostMapping("/tasks")
-    public TaskEntity create(@RequestBody TaskEntity data) {
-        TaskEntity response = taskService.create(data);
+    @PostMapping
+    public ResponseEntity<TaskEntity> create(@Valid @RequestBody TaskCreateDTO data) {
+
+        TaskEntity task = new TaskEntity();
+
+        task.setTitle(data.getTitle());
+        task.setStatus(data.getStatus());
+        task.setDescription(data.getDescription());
+
+        TaskEntity response = taskService.create(task);
+
+        return ResponseEntity.status(201).body(response);
+    }
+
+    @GetMapping
 
         return response;
     }

@@ -13,5 +13,4 @@ public class TaskCreateDTO {
 
     @NotBlank(message = "Description is required.")
     private String description;
-
 }

@@ -90,9 +90,9 @@ Padrão de resposta (STATUS 200)
 
 URL Search Params
 
-| Parâmetro | Exemplo de uso            | Descrição                                                                        |
-| --------- | ------------------------- | -------------------------------------------------------------------------------- |
-|  status   | /api/tasks?status=exemplo | Forneça o "status" da tarefa para trazer somente tarefas com ostatus determinado |
+| Parâmetro | Exemplo de uso            | Descrição                                                                         |
+| --------- | ------------------------- | --------------------------------------------------------------------------------- |
+|  status   | /api/tasks?status=exemplo | Forneça o "status" da tarefa para trazer somente tarefas com o status determinado |
 
 
 ### Leitura de tarefas por id GET /api/tasks/id

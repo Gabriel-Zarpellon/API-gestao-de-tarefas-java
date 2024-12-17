@@ -92,7 +92,7 @@ URL Search Params
 
 | Parâmetro | Exemplo de uso            | Descrição                                                                        |
 | --------- | ------------------------- | -------------------------------------------------------------------------------- |
-| category  | /api/tasks?status=exemplo | Forneça o "status" da tarefa para trazer somente tarefas com ostatus determinado |
+|  status   | /api/tasks?status=exemplo | Forneça o "status" da tarefa para trazer somente tarefas com ostatus determinado |
 
 
 ### Leitura de tarefas por id GET /api/tasks/id

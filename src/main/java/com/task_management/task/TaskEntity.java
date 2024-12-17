@@ -2,8 +2,6 @@ package com.task_management.task;
 
 import java.util.UUID;
 
-import com.task_management.user.UserEntity;
-
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,8 +20,4 @@ public class TaskEntity {
 
     @Column(nullable = false)
     private String description;
-
-    @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id")
-    private UserEntity user;
 }

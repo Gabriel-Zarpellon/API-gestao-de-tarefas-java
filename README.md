@@ -88,20 +88,12 @@ Padrão de resposta (STATUS 200)
 ]
 ```
 
-### Leitura de tarefas por status GET /api/tasks?status=Exemplo
+URL Search Params
 
-Padrão de resposta (STATUS 200)
+| Parâmetro | Exemplo de uso            | Descrição                                                                        |
+| --------- | ------------------------- | -------------------------------------------------------------------------------- |
+| category  | /api/tasks?status=exemplo | Forneça o "status" da tarefa para trazer somente tarefas com ostatus determinado |
 
-```json
-[
-	{
-		"id": "612d78fe-6848-43a0-a458-0452ef08b247",
-		"title": "Tarefa 1",
-		"status": "Exemplo",
-		"description": "Descrição da tarefa"
-	}
-]
-```
 
 ### Leitura de tarefas por id GET /api/tasks/id
 
